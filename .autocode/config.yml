@@ -5,3 +5,15 @@ author:
   email: test@crystal.sh
   url: 'http://crystalcodegen.com'
 copyright: 2015 Chris Tate
+imports:
+  crystal/bower: ~0.4.1
+outputs:
+  - generator: bower.ConfigGenerator
+    spec:
+      directory: app/components/
+      analytics: false
+      timeout: 120000
+      registry:
+        search:
+          - 'http://localhost:8000'
+          - 'https://bower.herokuapp.com'
